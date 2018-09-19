@@ -4,4 +4,4 @@ require('babel-register')({
 });
 // Import the rest of our application.
 module.exports = require('./server.js');
-module.exports = require('./db/mongodb-connect.js');
+//module.exports = require('./db/mongodb-connect.js');
