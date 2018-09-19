@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
-require('dotenv/config');
+import dotenv from "dotenv";
+dotenv.config();
 const connectionString = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
 MongoClient.connect(connectionString, (err, db) => {
     if (err) {
@@ -8,3 +9,5 @@ MongoClient.connect(connectionString, (err, db) => {
     console.log('connection to MongoDB sever was successfull');
     db.close();
 });
+
+
